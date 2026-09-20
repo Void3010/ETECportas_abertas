@@ -200,3 +200,14 @@ textarea{
   margin-left: 5%;
   
 }
+
+.ico{
+  margin-top: 15%;
+  margin-bottom: 15%;
+  background-color: white;
+  height: 100%;
+  width: 50%;
+  margin-inline: auto;
+  border: 2px solid #333;
+  border-radius: 3%; /* Rounds all corners by 12px */
+}
