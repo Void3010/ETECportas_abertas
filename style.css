@@ -206,7 +206,7 @@ textarea{
   margin-bottom: 15%;
   background-color: white;
   height: 512px;
-  width: 50%;
+  width: fit-content;
   margin-inline: auto;
   border: 2px solid #333;
   border-radius: 3%; /* Rounds all corners by 12px */
