@@ -1,316 +1,157 @@
-/* Importação de Fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@300;400;600;700&family=Montserrat:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700;900&display=swap');
 
-/* --- RESET & VARIÁVEIS --- */
 :root {
   --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #090d16 100%);
-  --accent-cyan: #06b6d4;
-  --accent-purple: #8b5cf6;
-  --accent-pink: #ec4899;
-  --text-dark: #1e293b;
-  --text-muted: #64748b;
-  --card-bg: rgba(255, 255, 255, 0.96);
-  --border-color: rgba(139, 92, 246, 0.25);
-  --font-heading: 'Montserrat', 'Cinzel', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-  min-height: fit-content;
+/* Estrutura para manter o footer sempre no final da PÁGINA */
+html, body {
+  height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background: var(--bg-gradient);
   background-attachment: fixed;
   font-family: var(--font-body);
-  color: #e2e8f0;
-  min-height: 100vh;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  height: 100%;
-
+  color: #f8fafc;
+  margin: 0;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+/* Trava o tamanho das bandeiras no topo */
+.navbar-flags img {
+  height: 22px !important;
+  width: auto !important;
+  max-width: 32px !important;
+  object-fit: contain;
+  border-radius: 3px;
+  transition: transform 0.2s ease;
 }
 
-#esp {
-  margin-top: 5%;
-  margin-bottom: 7%;
+.navbar-flags img:hover {
+  transform: scale(1.15);
 }
 
-/* --- TÍTULOS GERAIS --- */
-h1 {
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: #3b82f6;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #38bdf8, #a855f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 28px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
-h2 {
-  font-family: var(--font-heading);
-  color: #4f46e5;
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 15px;
-  margin-bottom: 10px;
+/* Conteúdo principal expande para empurrar o footer caso haja pouco conteúdo */
+main, .main-content {
+  flex: 1 0 auto;
 }
 
-hr {
-  border: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent-purple), var(--accent-cyan), transparent);
-  margin: 25px 0;
-  opacity: 0.8;
+/* Footer no final da página */
+footer {
+  flex-shrink: 0;
+  background-color: #0b0f19 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* --- INTRODUÇÃO --- */
-.intro {
-  margin-top: 90px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+footer .footer-text {
+  color: #cbd5e1 !important; /* Cor clara e visível para o texto do footer */
+  font-size: 0.875rem;
 }
 
-.intro p {
-  color: #f1f5f9;
-  font-size: 1.15rem;
-  line-height: 1.7;
-  font-weight: 400;
-  text-align: center;
+/* Ajustes da barra de navegação no Scrollspy (sobre.html) */
+.scrollspy-nav {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
 }
 
-/* --- CONTAINERS DAS SEÇÕES --- */
-#gestor,
-#criador,
-#gestor-guia {
-  margin-top: 50px;
-  margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
-  max-width: 1240px;
-  background: var(--card-bg);
-  color: var(--text-dark);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-#gestor h1,
-#criador h1,
-#gestor-guia h1 {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.devs {
-  background-color: white;
-  min-width: fit-content;
-  max-width: max-content;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-}
-
-.devs p {
-
-  color: #000;
-}
-
-.devs h1 {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.prof {
-  background-color: white;
-  min-width: fit-content;
-  max-width: max-content;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  text-align: center;
-}
-
-.prof h1 {
-  margin-top: 2%;
-}
-
-.professor {
-  margin-top: 2%;
-}
-
-.professor p {
-  color: #000;
-}
-
-.bibliografia{
-  background-color: white;
-  min-width: fit-content;
-  max-width: max-content;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  text-align: center;
-
-}
-
-
-
-/* --- MENU LATERAL (NAV-PILLS / LIST GROUP) --- */
-.nav-pills .nav-link {
-  color: #475569;
-  font-weight: 600;
-  border-radius: 10px;
-  padding: 10px 14px;
+.scrollspy-nav .nav-link {
+  color: #cbd5e1;
+  border-radius: 8px;
   margin-bottom: 4px;
-  transition: all 0.25s ease-in-out;
-  border-left: 3px solid transparent;
+  word-break: break-word;
 }
 
-.nav-pills .nav-link:hover {
-  background-color: #f1f5f9;
-  color: #7c3aed;
-  border-left-color: #7c3aed;
-  transform: translateX(4px);
+.scrollspy-nav .nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.nav-pills .nav-link.active {
+.scrollspy-nav .nav-link.active {
   background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
-  border-left-color: var(--accent-cyan);
+  font-weight: 600;
 }
 
-.nav-pills .nav-link h1,
-.nav-pills .nav-link h2 {
-  background: none;
-  -webkit-text-fill-color: initial;
-  color: inherit;
-  font-size: 0.95rem;
-  margin: 0;
-  text-shadow: none;
-}
-
-/* --- CAIXA DE CONTEÚDO ROLÁVEL (SCROLLSPY) --- */
-.scrollspy-box {
-  position: relative;
-  height: 62vh;
-  min-height: 450px;
-  overflow-y: auto !important;
-  padding: 28px;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
+/* Conteúdo do Scrollspy */
+.scrollspy-content {
   background-color: #ffffff;
-  color: #334155;
-  text-align: justify;
-  line-height: 1.7;
-  scroll-behavior: smooth;
-  scrollbar-width: thin !important;
-  scrollbar-color: #8b5cf6 #f1f5f9 !important;
+  color: #1e293b;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.scrollspy-box strong {
-  color: #0f172a;
+/* Imagens responsivas e carrossel */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Estilização da barra de rolagem (WebKit) */
-.scrollspy-box::-webkit-scrollbar {
-  display: block !important;
-  width: 8px !important;
-}
-
-.scrollspy-box::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  border-radius: 10px;
-}
-
-.scrollspy-box::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #8b5cf6, #6366f1);
-  border-radius: 10px;
-}
-
-.scrollspy-box::-webkit-scrollbar-thumb:hover {
-  background: #4f46e5;
-}
-
-/* --- LISTAS INTERNAS DO CONTEÚDO --- */
-.scrollspy-box ul,
-.scrollspy-box ol {
-  padding-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-.scrollspy-box li {
-  margin-bottom: 8px;
-}
-
-/* --- TEXTAREA & DEMAIS ELEMENTOS --- */
-textarea {
-  width: 100%;
-  height: 250px;
-  padding: 14px 20px;
-  box-sizing: border-box;
-  border: 2px solid #cbd5e1;
-  border-radius: 10px;
-  background-color: #f8fafc;
-  font-size: 16px;
-  font-family: var(--font-body);
-  resize: none;
-  transition: border-color 0.2s;
-}
-
-textarea:focus {
-  outline: none;
-  border-color: #8b5cf6;
-}
-
-/* --- RODAPÉ --- */
+/* Botão de voltar ao topo no footer */
+/* Footer com posicionamento relativo */
+/* Footer precisa de posicionamento relativo na tela inteira */
+/* Footer responsivo com área interna segura */
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin-top: 100%;
-  background: #090d16 !important;
-  border-top: 1px solid var(--border-color);
+  position: relative;
+}
+
+/* Âncora presa no canto direito verticalmente alinhada */
+.btn-back-to-top {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  z-index: 10;
 }
 
-footer a {
-  margin-left: auto;
+.btn-back-to-top:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
 }
 
-.footer-brand {
-  font-family: var(--font-heading);
-  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
-  letter-spacing: 1px;
+/* No mobile: adiciona espaço extra à direita do texto para não colidir com o botão */
+@media (max-width: 576px) {
+  .footer-content {
+    padding-right: 45px;
+    padding-left: 10px;
+  }
+  .btn-back-to-top {
+    right: 10px;
+  }
+}
+
+/* Ajustes de responsividade para telas pequenas */
+@media (max-width: 991.88px) {
+  .scrollspy-nav {
+    margin-bottom: 20px;
+  }
 }

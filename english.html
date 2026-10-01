@@ -2,99 +2,165 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image" href="img/icone.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <title>Content Creator - Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image" href="img/icone.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Content Creators - Home</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <!-- Link para versão em inglês -->
-			<a class="navbar-brand" href="index.html">
-				<img src="img/br.png" height="24" alt="English">
-			</a>
+	<!-- Navbar with Language Selection -->
+	<nav class="navbar navbar-dark bg-dark fixed-top shadow">
+		<div class="container-fluid">
+			<!-- Title -->
+			<a class="navbar-brand fw-bold me-auto" href="english.html">Content Creators</a>
 
-			<!-- Título -->
-			<a class="navbar-brand" href="#">
-				Content Creator
-			</a>
-
-			<!-- Botão do menu -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-				data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-				aria-label="Toggle navigation">
+			<!-- Hamburger Menu Button -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<!-- Menu lateral -->
-			<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-				aria-labelledby="offcanvasDarkNavbarLabel">
-
-				<div class="offcanvas-header">
-					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-						aria-label="Close">
-					</button>
+			<!-- Offcanvas Side Menu -->
+			<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar">
+				<div class="offcanvas-header border-bottom border-secondary">
+					<h5 class="offcanvas-title">Menu</h5>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 				</div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="english.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <a class="nav-link" href="bibliography.html">Bibliography</a>
-                        </li>
+				<div class="offcanvas-body">
+					<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
+						<!-- Main Links -->
+						<li class="nav-item"><a class="nav-link active" href="english.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="areas.html">Areas of Expertise</a></li>
+						<li class="nav-item"><a class="nav-link" href="bibliography.html">Bibliography</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Credits</a>
+							<ul class="dropdown-menu dropdown-menu-dark">
+								<li><a class="dropdown-item" href="teacher.html">Advisors</a></li>
+								<li><a class="dropdown-item" href="devs.html">Developers</a></li>
+							</ul>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Credits</a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="teacher.html">Teachers</a></li>
-                                <li><a class="dropdown-item" href="devs.html">Developers</a></li>
+						<hr class="dropdown-divider border-secondary my-2">
 
-                            </ul>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        </li>
-                    </ul>
+						<!-- Language Selection Dropdown -->
+						<li class="nav-item dropdown mb-2">
+							<a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="img/us.png" alt="English" style="height: 18px;">
+								<span>Language / Idioma</span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-dark">
+								<li>
+									<a class="dropdown-item d-flex align-items-center gap-2" href="index.html">
+										<img src="img/br.png" alt="Português" style="height: 16px;"> Português (BR)
+									</a>
+								</li>
+								<li>
+									<a class="dropdown-item d-flex align-items-center gap-2 active" href="english.html">
+										<img src="img/us.png" alt="English" style="height: 16px;"> English (US)
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
 
-                </div>
-            </div>
-        </div>
-    </nav>
+	<main class="container my-5 pt-5">
+		<!-- Home Carousel -->
+		<div id="homeCarousel" class="carousel slide rounded-4 overflow-hidden shadow-lg mb-5" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+				<button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+				<button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/criadordeconteudo.png" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Digital Content Creation">
+					<div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3">
+						<h5>Digital Content Creation</h5>
+						<p>Explore the world of digital media creators and managers in the tech era.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="img/carreira.jpg" class="d-block w-100 style-carousel-img" style="height: 400px; object-fit: cover;" alt="Careers and Market">
+					<div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3">
+						<h5>Careers & Job Market</h5>
+						<p>Discover salary ranges, academic qualifications, and IT career pathways.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="img/skills.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Media Strategy">
+					<div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3">
+						<h5>Media Production & Strategy</h5>
+						<p>Learn hard skills, soft skills, and digital professional workflows.</p>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</button>
+		</div>
 
+		<!-- Illustrated Feature Cards -->
+		<div class="row g-4 text-dark">
+			<div class="col-md-4">
+				<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+					<img src="img/criadordeconteudo.png" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Content Creator">
+					<div class="card-body">
+						<h5 class="card-title fw-bold text-primary">Content Creator</h5>
+						<p class="card-text">Responsible for audiovisual production, scripting, video editing, and audience engagement on digital platforms.</p>
+						<a href="areas.html" class="btn btn-outline-primary rounded-pill">View Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+					<img src="img/gestordigital.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Content Manager">
+					<div class="card-body">
+						<h5 class="card-title fw-bold text-primary">Content Manager</h5>
+						<p class="card-text">Plans strategies, leads copywriting and design teams, and analyzes performance metrics and ROI.</p>
+						<a href="areas.html" class="btn btn-outline-primary rounded-pill">View Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+					<img src="img/softhard.png" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Guide and Skills">
+					<div class="card-body">
+						<h5 class="card-title fw-bold text-primary">Guide & Competencies</h5>
+						<p class="card-text">Understand key soft and hard skills required to stand out in the digital communication ecosystem.</p>
+						<a href="about.html" class="btn btn-outline-primary rounded-pill">Access Guide</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
+	<!-- Footer -->
+	<footer class="py-3 bg-dark text-white border-top border-secondary position-relative">
+		<div class="container-fluid text-center footer-content">
+			<p class="footer-text m-0">
+				ETEC DE HORTOLÂNDIA 2026 – &copy; All Rights Reserved<br>
+				<small class="opacity-75">Non-profit academic project</small>
+			</p>
 
+			<a href="#" class="btn-back-to-top shadow" title="Back to top" aria-label="Back to top">
+				▲
+			</a>
+		</div>
+	</footer>
 
-<br><br><br>
-    <h1 align="center"><b><font color="#9400D3">Content Creator</font></b></h1>
-	<div class="ico">
-		<p align="center">
-			<img src="img/criadordeconteudo.png" height="512px">
-		</p>
-	</div>
-
-
-
-
-
-    <footer class="bg-dark text-light mt-auto py-5" data-bs-theme="dark">
-        <div class="container text-center">
-            <span class="text-body-secondary small"> 2026 ETEC Hortolândia - &copy; All Rights Reserved.</span>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

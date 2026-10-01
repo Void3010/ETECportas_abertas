@@ -2,227 +2,181 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image" href="img/icone.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <title>Content Creator - Contact</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image" href="img/icone.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Content Creators - Contact</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-           <!-- Link para versão em inglês -->
-			<a class="navbar-brand" href="contato.html">
-				<img src="img/br.png" height="24" alt="English">
-			</a>
+	<nav class="navbar navbar-dark bg-dark fixed-top shadow">
+	<div class="container-fluid">
+		<!-- Title -->
+		<a class="navbar-brand fw-bold me-auto" href="english.html">Content Creators</a>
 
-			<!-- Título -->
-			<a class="navbar-brand" href="#">
-				Content Creator
-			</a>
+		<!-- Hamburger Button -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-			<!-- Botão do menu -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-				data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+		<!-- Offcanvas Menu -->
+		<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar">
+			<div class="offcanvas-header border-bottom border-secondary">
+				<h5 class="offcanvas-title">Menu</h5>
+				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
-			<!-- Menu lateral -->
-			<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-				aria-labelledby="offcanvasDarkNavbarLabel">
+					<!-- Main Links -->
+					<li class="nav-item"><a class="nav-link" href="english.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="areas.html">Areas of Expertise</a></li>
+					<li class="nav-item"><a class="nav-link" href="bibliography.html">Bibliography</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Credits</a>
+						<ul class="dropdown-menu dropdown-menu-dark">
+							<li><a class="dropdown-item" href="teacher.html">Advisors</a></li>
+							<li><a class="dropdown-item" href="devs.html">Developers</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
 
-				<div class="offcanvas-header">
-					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-						aria-label="Close">
-					</button>
+					<hr class="dropdown-divider border-secondary my-2">
+
+					<!-- Language Selection Dropdown -->
+					<li class="nav-item dropdown mb-2">
+						<a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="img/us.png" alt="English" style="height: 18px;">
+							<span>Language / Idioma</span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-dark">
+							<li>
+								<a class="dropdown-item d-flex align-items-center gap-2" href="contato.html">
+									<img src="img/br.png" alt="Português" style="height: 16px;"> Português (BR)
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item d-flex align-items-center gap-2 active" href="contact.html">
+									<img src="img/us.png" alt="English" style="height: 16px;"> English (US)
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+	<main class="container my-5 pt-5">
+		<div class="row justify-content-center">
+			<div class="col-md-8 col-lg-6">
+				<div class="card border-0 shadow-lg rounded-4 p-3 text-dark">
+					<div class="card-body">
+						<h3 class="card-title fw-bold text-center mb-4 text-primary">Get in Touch</h3>
+
+						<form class="needs-validation" novalidate>
+							<!-- Full Name -->
+							<div class="mb-3">
+								<label for="nome" class="form-label fw-semibold">Full Name</label>
+								<input type="text" class="form-control rounded-3" id="nome" required
+									pattern="^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ]+(\s+[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ]+)+$">
+								<div class="invalid-feedback">
+									Please enter your full name (first and last name).
+								</div>
+							</div>
+
+							<!-- E-mail -->
+							<div class="mb-3">
+								<label for="email" class="form-label fw-semibold">E-mail</label>
+								<input type="email" class="form-control rounded-3" id="email" required>
+								<div class="invalid-feedback">
+									Please enter a valid e-mail address.
+								</div>
+							</div>
+
+							<!-- Phone -->
+							<div class="mb-3">
+								<label for="telefone" class="form-label fw-semibold">Phone Number</label>
+								<input type="tel" class="form-control rounded-3" id="telefone" required
+									pattern="[0-9]{10,15}">
+								<div class="invalid-feedback">
+									Please enter a valid phone number.
+								</div>
+							</div>
+
+							<!-- Rating -->
+							<div class="mb-3">
+								<label for="avaliacao" class="form-label fw-semibold">Your Rating for the Website</label>
+								<select class="form-select rounded-3" id="avaliacao" required>
+									<option value="" selected disabled>Select a rating</option>
+									<option value="0">0 - Needs Improvement</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5 - Excellent</option>
+								</select>
+								<div class="invalid-feedback">
+									Please select a rating from 0 to 5.
+								</div>
+							</div>
+
+							<!-- Comment -->
+							<div class="mb-4">
+								<label for="comentario" class="form-label fw-semibold">Comment (Optional)</label>
+								<textarea class="form-control rounded-3" id="comentario" rows="4"
+									style="resize: none;"></textarea>
+							</div>
+
+							<div class="d-grid gap-2">
+								<button class="btn btn-primary rounded-pill py-2 fw-bold" type="submit">Send Message</button>
+								<button class="btn btn-outline-secondary rounded-pill py-2" type="reset">Clear Form</button>
+							</div>
+						</form>
+					</div>
 				</div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="english.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="managers.html">Managers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="creators.html">Creators</a>
-                        </li>
-                        <a class="nav-link" href="bibliography.html">Bibliography</a>
-                        </li>
+			</div>
+		</div>
+	</main>
 
+	<script>
+		(() => {
+			'use strict'
+			const forms = document.querySelectorAll('.needs-validation')
+			Array.from(forms).forEach(form => {
+				form.addEventListener('submit', event => {
+					if (!form.checkValidity()) {
+						event.preventDefault()
+						event.stopPropagation()
+					}
+					form.classList.add('was-validated')
+				}, false)
+			})
+		})()
+	</script>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Credits</a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="teacher.html">Teachers</a></li>
-                                <li><a class="dropdown-item" href="devs.html">Developers</a></li>
+	<footer class="py-3 bg-dark text-white border-top border-secondary position-relative">
+  <div class="container-fluid text-center footer-content">
+    
+    <!-- Footer Text -->
+    <p class="footer-text m-0">
+      ETEC DE HORTOLÂNDIA 2026 – &copy; All Rights Reserved<br>
+      <small class="opacity-75">Non-profit academic project</small>
+    </p>
 
-                            </ul>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
-                        </li>
-                        </li>
-                    </ul>
+    <!-- Back to top anchor -->
+    <a href="#" class="btn-back-to-top shadow" title="Back to top" aria-label="Back to top">
+      ▲
+    </a>
 
-                </div>
-            </div>
-        </div>
-    </nav>
+  </div>
+</footer>
 
-
-
-
-
-
-
-    <div id="esp">
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="card shadow-sm">
-                        <div class="card-body p-4">
-                            <h5 class="card-title mb-4">Leave Your Comment</h5>
-
-                            <form class="needs-validation" novalidate>
-
-                                <div class="mb-3">
-                                    <label for="nome" class="form-label">
-                                        Name
-                                    </label>
-
-                                    <input type="text" class="form-control" id="nome" required minlength="3"
-                                        pattern="^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ\s]+$">
-
-                                    <div class="invalid-feedback">
-                                        Please enter a valid name with at least 3 letters
-                                        (numbers and special characters are not allowed).
-                                    </div>
-                                </div>
-
-
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">
-                                        E-mail
-                                    </label>
-
-                                    <input type="email" class="form-control" id="email" required>
-
-                                    <div class="invalid-feedback">
-                                        Please enter a valid e-mail address.
-                                    </div>
-                                </div>
-
-
-                                <div class="mb-3">
-                                    <label for="telefone" class="form-label">
-                                        Phone
-                                    </label>
-
-                                    <input type="tel" class="form-control" id="telefone" required
-                                        pattern="[0-9\s\-\(\)\+]{10,15}">
-
-                                    <div class="invalid-feedback">
-                                        Please enter a valid phone number.
-                                    </div>
-                                </div>
-
-
-                                <div class="mb-3">
-                                    <label for="avaliacao" class="form-label">
-                                        How much did you like the website?
-                                    </label>
-
-                                    <select class="form-select" id="avaliacao" required>
-                                        <option value="" selected disabled>Select a rating</option>
-                                        <option value="0">0 - I didn't like it</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5 - I liked it very much</option>
-                                    </select>
-
-                                    <div class="invalid-feedback">
-                                        Please select a rating from 0 to 5.
-                                    </div>
-                                </div>
-
-
-                                <div class="mb-3">
-                                    <label for="comentario" class="form-label">
-                                        Comment
-                                    </label>
-
-                                    <textarea class="form-control" id="comentario" rows="4" required
-                                        minlength="3"></textarea>
-
-                                    <div class="invalid-feedback">
-                                        The comment must contain at least 3 characters.
-                                    </div>
-                                </div>
-
-
-                                
-
-
-                                <button class="btn btn-primary w-50" type="submit">
-                                    Submit Comment
-                                </button>
-
-                                <br><br>
-
-                                <button class="btn btn-primary w-50" type="reset">
-                                    Clear
-                                </button>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <script>
-        (() => {
-            'use strict'
-
-            const forms = document.querySelectorAll('.needs-validation')
-
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-    </script>
-
-
-    <footer class="bg-dark text-light mt-auto py-5" data-bs-theme="dark">
-        <div class="container text-center">
-            <span class="text-body-secondary small"> 2026 ETEC Hortolândia - &copy; All Rights Reserved.</span>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
